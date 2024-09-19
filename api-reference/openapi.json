@@ -19,7 +19,7 @@
     }
   ],
   "paths": {
-    "/api/v1/createUser": {
+    "/createUser": {
       "post": {
         "summary": "Create a new user",
         "description": "Creates a new user account and associated profile",
