@@ -8,11 +8,11 @@
   "favicon": "https://qifyfvpczqkjuiftvkeq.supabase.co/storage/v1/object/public/remote-assets/brandblast_square_logo.svg",
   "colors": {
     "primary": "#630dff",
-    "light": "#8140f7",
+    "light": "#9962fc",
     "dark": "#630dff",
     "anchors": {
       "from": "#630dff",
-      "to": "#8140f7"
+      "to": "#9962fc"
     }
   },
   "topbarLinks": [
