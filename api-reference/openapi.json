@@ -1,5 +1,5 @@
 {
-  "openapi": "0.0.1",
+  "openapi": "3.1.0",
   "info": {
     "title": "Brandblast API",
     "description": "A user management API for white labels",
