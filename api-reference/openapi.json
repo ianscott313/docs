@@ -21,7 +21,6 @@
   "paths": {
     "/createUser": {
       "post": {
-        "summary": "Create a new user",
         "description": "Creates a new user account and associated profile",
         "requestBody": {
           "required": true,
