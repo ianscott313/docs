@@ -52,7 +52,6 @@
                 }
               },
               "example": {
-                "api_key": "your_api_key_here",
                 "user_email": "newuser@example.com",
                 "user_password": "securePassword123",
                 "should_reset_password": "false"
