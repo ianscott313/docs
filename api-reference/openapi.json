@@ -9,7 +9,7 @@
       "url": "https://opensource.org/licenses/MIT"
     }
   },
-  "paths": {
+"paths": {
     "/api/v1/createUser": {
       "post": {
         "summary": "Create a new user",
@@ -41,6 +41,12 @@
                     "description": "Flag to indicate if the user should reset their password"
                   }
                 }
+              },
+              "example": {
+                "api_key": "your_api_key_here",
+                "user_email": "newuser@example.com",
+                "user_password": "securePassword123",
+                "should_reset_password": "false"
               }
             }
           }
@@ -60,6 +66,10 @@
                       "type": "string"
                     }
                   }
+                },
+                "example": {
+                  "user_email": "newuser@example.com",
+                  "user_password": "securePassword123"
                 }
               }
             }
@@ -75,6 +85,9 @@
                       "type": "string"
                     }
                   }
+                },
+                "example": {
+                  "message": "user_email is missing"
                 }
               }
             }
@@ -90,6 +103,9 @@
                       "type": "string"
                     }
                   }
+                },
+                "example": {
+                  "message": "Unauthorized: Invalid or unauthorized API key."
                 }
               }
             }
@@ -105,6 +121,9 @@
                       "type": "string"
                     }
                   }
+                },
+                "example": {
+                  "message": "No white label user found for api key"
                 }
               }
             }
@@ -120,6 +139,9 @@
                       "type": "string"
                     }
                   }
+                },
+                "example": {
+                  "message": "Failed to create user"
                 }
               }
             }
