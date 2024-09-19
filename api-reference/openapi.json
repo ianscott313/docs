@@ -1,5 +1,5 @@
 {
-  "api": "0.0.1",
+  "openapi": "0.0.1",
   "info": {
     "title": "Brandblast API",
     "description": "A user management API for white labels",
@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "http://dashboard.brandblast.ai"
+      "url": "http://dashboard.brandblast.ai/api/v1"
     }
   ],
   "security": [
@@ -19,7 +19,7 @@
     }
   ],
   "paths": {
-        "/api/v1/createUser": {
+    "/api/v1/createUser": {
       "post": {
         "summary": "Create a new user",
         "description": "Creates a new user account and associated profile",
