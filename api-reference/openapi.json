@@ -156,6 +156,131 @@
           }
         }
       }
+    },
+    "/v1/deleteUser": {
+      "post": {
+        "tags": ["User Management"],
+        "operationId": "deleteUser",
+        "summary": "Delete a user",
+        "description": "Deletes a user and all associated data, including Ayrshare profiles",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["user_email"],
+                "properties": {
+                  "user_email": {
+                    "type": "string",
+                    "format": "email",
+                    "description": "Email address of the user to be deleted"
+                  },
+                  "api_key": {
+                    "type": "string",
+                    "description": "API key for authentication (deprecated, use X-API-Key header instead)"
+                  }
+                }
+              },
+              "example": {
+                "user_email": "userToDelete@example.com"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "message": "User and all associated data deleted successfully."
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - missing parameters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "message": "Missing required parameters."
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized - invalid API key",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "message": "Unauthorized: Invalid or unauthorized API key."
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden - unauthorized operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "message": "Unauthorized: Cannot delete a white label user."
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "example": {
+                  "message": "Failed to delete user and associated data."
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
