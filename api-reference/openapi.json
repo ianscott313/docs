@@ -33,11 +33,12 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "required": ["api_key", "user_email", "user_password"],
+                "required": ["user_email", "user_password"],
                 "properties": {
                   "api_key": {
                     "type": "string",
-                    "description": "API key for authentication"
+                    "description": "API key for authentication. Please set this in the X-API-Key header instead.",
+                    "deprecated": true
                   },
                   "user_email": {
                     "type": "string",
