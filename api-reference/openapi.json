@@ -9,9 +9,17 @@
       "url": "https://opensource.org/licenses/MIT"
     }
   },
-"paths": {
+  "tags": [
+    {
+      "name": "User Management",
+      "description": "APIs for managing users"
+    }
+  ],
+  "paths": {
     "/api/v1/createUser": {
       "post": {
+        "tags": ["User Management"],
+        "operationId": "createUser",
         "summary": "Create a new user",
         "description": "Creates a new user and associated profile in the Supabase database",
         "requestBody": {
