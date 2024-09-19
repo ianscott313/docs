@@ -11,7 +11,7 @@
   },
     "servers": [
     {
-      "url": "http://sandbox.mintlify.com"
+      "url": "https://dashboard.brandblast.ai/api"
     }
   ],
   "tags": [
@@ -21,7 +21,7 @@
     }
   ],
   "paths": {
-    "/api/v1/createUser": {
+    "/v1/createUser": {
       "post": {
         "tags": ["User Management"],
         "operationId": "createUser",
