@@ -26,7 +26,7 @@
         "tags": ["User Management"],
         "operationId": "createUser",
         "summary": "Create a new user",
-        "description": "Creates a new user and associated profile in the Supabase database",
+        "description": "Create a new user on your white label tool. This does not notify the new user in any way.",
         "requestBody": {
           "required": true,
           "content": {
@@ -47,7 +47,7 @@
                   "should_reset_password": {
                     "type": "string",
                     "enum": ["true", "false"],
-                    "description": "Flag to indicate if the user should reset their password"
+                    "description": "Flag to indicate if the user should reset their password upon login"
                   }
                 }
               },
@@ -162,7 +162,7 @@
         "tags": ["User Management"],
         "operationId": "deleteUser",
         "summary": "Delete a user",
-        "description": "Deletes a user and all associated data, including Ayrshare profiles",
+        "description": "Delete a user from your white label tool. This does not notify the user.",
         "requestBody": {
           "required": true,
           "content": {
@@ -283,7 +283,7 @@
         "tags": ["User Management"],
         "operationId": "resetUserPassword",
         "summary": "Reset user password",
-        "description": "Resets the password for a specified user",
+        "description": "Reset the password for a specified user. This does not notify the user in any way.",
         "requestBody": {
           "required": true,
           "content": {
