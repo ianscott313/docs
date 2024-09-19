@@ -281,8 +281,8 @@
           }
         }
       }
-    }
-        "/v1/resetUserPassword": {
+    },
+    "/v1/resetUserPassword": {
       "post": {
         "tags": ["User Management"],
         "operationId": "resetUserPassword",
