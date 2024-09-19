@@ -175,10 +175,6 @@
                     "type": "string",
                     "format": "email",
                     "description": "Email address of the user to be deleted"
-                  },
-                  "api_key": {
-                    "type": "string",
-                    "description": "API key for authentication (deprecated, use X-API-Key header instead)"
                   }
                 }
               },
@@ -304,10 +300,6 @@
                   "new_password": {
                     "type": "string",
                     "description": "New password for the user"
-                  },
-                  "api_key": {
-                    "type": "string",
-                    "description": "API key for authentication (deprecated, use X-API-Key header instead)"
                   }
                 }
               },
