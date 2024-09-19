@@ -47,7 +47,8 @@
                   "should_reset_password": {
                     "type": "string",
                     "enum": ["true", "false"],
-                    "description": "Flag to indicate if the user should reset their password upon login"
+                    "default": "false",
+                    "description": "Flag to indicate if the user should reset their password upon login. Defaults to false."
                   }
                 }
               },
