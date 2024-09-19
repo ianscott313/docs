@@ -25,12 +25,6 @@
     "name": "Dashboard",
     "url": "https://dashboard.brandblast.ai"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
   "primaryTab": {
     "name": "API Reference"
   },
