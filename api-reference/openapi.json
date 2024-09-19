@@ -19,6 +19,129 @@
     }
   ],
   "paths": {
+        "/api/v1/createUser": {
+      "post": {
+        "summary": "Create a new user",
+        "description": "Creates a new user account and associated profile",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["api_key", "user_email", "user_password"],
+                "properties": {
+                  "api_key": {
+                    "type": "string",
+                    "description": "API key for authentication"
+                  },
+                  "user_email": {
+                    "type": "string",
+                    "format": "email",
+                    "description": "Email address of the new user"
+                  },
+                  "user_password": {
+                    "type": "string",
+                    "description": "Password for the new user account"
+                  },
+                  "should_reset_password": {
+                    "type": "boolean",
+                    "description": "Flag to indicate if the user should reset their password",
+                    "default": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "user_email": {
+                      "type": "string",
+                      "description": "Email of the created user"
+                    },
+                    "user_password": {
+                      "type": "string",
+                      "description": "Password of the created user"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - missing parameters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "description": "Error message describing the missing parameter"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized - invalid API key",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "description": "Error message indicating unauthorized access"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden - no white label user found for API key",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "description": "Error message indicating no white label user found"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "description": "Error message describing the internal server error"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/plants": {
       "get": {
         "description": "Returns all plants from the system that the user has access to",
