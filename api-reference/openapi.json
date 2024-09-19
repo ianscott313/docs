@@ -35,11 +35,6 @@
                 "type": "object",
                 "required": ["user_email", "user_password"],
                 "properties": {
-                  "api_key": {
-                    "type": "string",
-                    "description": "API key for authentication. Please set this in the X-API-Key header instead.",
-                    "deprecated": true
-                  },
                   "user_email": {
                     "type": "string",
                     "format": "email",
@@ -53,6 +48,11 @@
                     "type": "string",
                     "enum": ["true", "false"],
                     "description": "Flag to indicate if the user should reset their password"
+                  },
+                  "api_key": {
+                    "type": "string",
+                    "description": "API key for authentication. Please set this in the X-API-Key header instead.",
+                    "deprecated": true
                   }
                 }
               },
