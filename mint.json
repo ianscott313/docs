@@ -40,8 +40,7 @@
       "pages": [
         "api-reference/endpoint/createUser",
         "api-reference/endpoint/deleteUser",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/resetUserPassword"
       ]
     }
   ],
